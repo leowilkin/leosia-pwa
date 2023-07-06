@@ -3,65 +3,418 @@
 import { Layout } from "@globals"
 ---
 
-<Layout title="Astro PWA Starter">
-	<section class="p-6 flex-1 flex flex-col justify-between">
-		<!-- Welcome -->
-		<div
-			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
-		>
-			<div class="space-y-2 text-center">
-				<h1 class="text-4xl font-semibold">🟢 astro-pwa-starter</h1>
-				<p class="italic">
-					It works! Check out <span class="p-1 rounded-lg bg-gray-100 font-mono"
-						>/src/pages</span
-					> to get started.
-				</p>
-			</div>
-			<div>
-				<ul class="grid md:grid-cols-2 gap-4">
-					<li>
-						<a
-							href="https://github.com/shaunchander/astro-pwa-starter#-getting-started-guide"
-							class="p-6 rounded-2xl border border-gray-500 flex flex-col text-center hover:bg-blue-500 focus:bg-blue-500 hover:text-white duration-300 ease-in-out transition hover:border-blue-500 focus:border-blue-500"
-						>
-							<span class="text-xl font-medium">🚀 Getting started guide</span>
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://github.com/shaunchander/astro-pwa-starter#-documentation"
-							class="p-6 rounded-2xl border border-gray-500 flex flex-col text-center hover:bg-blue-500 focus:bg-blue-500 hover:text-white duration-300 ease-in-out transition hover:border-blue-500 focus:border-blue-500"
-						>
-							<span class="text-xl font-medium">📖 Documentation</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+<Layout title="Apply for a Leosian UK Visa">
+	<body class="bg-gray-100 text-gray-900 tracking-wider leading-normal">
 
-		<!-- Twitter -->
-		<div class="flex justify-center">
-			<a
-				href="https://twitter.com/shaunchander"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="relative inline-flex items-center rounded-full bg-gray-100 p-4 transition duration-300 ease-in-out hover:-translate-y-2 focus:-translate-y-2 group hover:text-white focus:text-white"
-			>
-				<div class="flex items-center space-x-4 relative z-10">
-					<img
-						src="https://pbs.twimg.com/profile_images/1315666131051597824/OfWHLLgz_400x400.jpg"
-						width={48}
-						height={48}
-						class="rounded-full object-cover"
-						alt=""
-					/>
-					<span class="text-lg font-bold">Built by @shaunchander</span>
+		<nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
+
+			<div class="w-full container mx-auto flex flex-wrap items-center justify-between my-4">
+
+				<div class="pl-4 md:pl-0">
+					<a class="flex items-center text-blue-800 text-base xl:text-xl no-underline hover:no-underline font-extrabold font-sans" href="#">
+						<image src="/leosiafavicon.png" class="fill-current h-12 inline-block text-blue-600 mr-4">Visa Application Office
+					</a>
 				</div>
-				<div
-					class="inline-block rounded-full absolute inset-0 bg-gradient-to-tr from-[#07f49e] to-[#42047e] opacity-0 group-hover:opacity-100 group-focus:opacity-100 duration-300 ease-in-out transition"
-				>
+
+				<div class="pr-0 flex justify-end">
+
+					<div class="flex relative inline-block float-right">
+
+						<div class="relative text-sm">
+
+							<button id="userButton" class="flex items-center mr-3 shadow bg-blue-800 hover:bg-blue-700 focus:shadow-outline focus:outline-none text-white text-sm md:text-base font-bold py-2 px-4 rounded">
+								Menu
+								<svg class="pl-2 h-2 fill-current text-white" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+									<g>
+										<path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+									</g>
+								</svg>
+							</button>
+
+							<div id="userMenu" class="bg-white rounded shadow-md mt-2 mr-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
+								<ul class="list-reset">
+									<li><a href="#" class="px-4 py-2 block hover:bg-gray-400 no-underline hover:no-underline">My account</a></li>
+									<li><a href="#" class="px-4 py-2 block hover:bg-gray-400 no-underline hover:no-underline">Notifications</a></li>
+									<li>
+										<hr class="border-t mx-2 border-gray-400">
+									</li>
+									<li><a href="#" class="px-4 py-2 block text-blue-700 font-bold hover:bg-blue-800 hover:text-white no-underline hover:no-underline">Logout</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+
 				</div>
-			</a>
+
+			</div>
+		</nav>
+		<!--Container-->
+		<div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+			<div class="w-full lg:w-1/5 px-6 text-xl text-gray-800 leading-normal">
+				<p class="text-base font-bold py-2 lg:pb-6 text-gray-700">Progress</p>
+				<div class="block lg:hidden sticky inset-0">
+					<button id="menu-toggle" class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-blue-600 appearance-none focus:outline-none">
+						<svg class="fill-current h-3 float-right" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+						</svg>
+					</button>
+				</div>
+				<div class="w-full sticky inset-0 hidden max-h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 my-2 lg:my-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20" style="top:6em;" id="menu-content">
+					<ul class="list-reset py-2 md:py-0">
+						<li class="py-1 md:my-2 hover:bg-blue-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-blue-600">
+							<a href='#section1' class="block pl-4 align-middle text-gray-700 no-underline hover:text-blue-600">
+								<span class="pb-1 md:pb-0 text-sm">About You</span>
+							</a>
+						</li>
+						<li class="py-1 md:my-2 hover:bg-blue-100 lg:hover:bg-transparent border-l-4 border-transparent">
+							<a href='#section2' class="block pl-4 align-middle text-gray-700 no-underline hover:text-blue-600">
+								<span class="pb-1 md:pb-0 text-sm">Your Visa</span>
+							</a>
+						</li>
+						<li class="py-1 md:my-2 hover:bg-blue-100 lg:hover:bg-transparent border-l-4 border-transparent">
+							<a href='#section3' class="block pl-4 align-middle text-gray-700 no-underline hover:text-blue-600">
+								<span class="pb-1 md:pb-0 text-sm">Agreement</span>
+							</a>
+						</li>
+						<li class="py-1 md:my-2 hover:bg-blue-100 lg:hover:bg-transparent border-l-4 border-transparent">
+							<a href='#section4' class="block pl-4 align-middle text-gray-700 no-underline hover:text-blue-600">
+								<span class="pb-1 md:pb-0 text-sm">Submission</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<section class="w-full lg:w-4/5">
+
+				<!--Title-->
+				<h1 class="flex items-center font-sans font-bold break-normal text-gray-700 px-2 text-xl mt-12 lg:mt-0 md:text-2xl">
+					Apply for a Leosian UK Visa
+				</h1>
+
+				<!--divider-->
+				<hr class="bg-gray-300 my-12">
+
+				<!--Title-->
+				<h2 class="font-sans font-bold break-normal text-gray-700 px-2 pb-8 text-xl">About You</h2>
+
+				<!--Card-->
+				<div id='section1' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+
+					<form action="https://formsubmit.co/bf33057e448ee215e364b15c2301b52a" method="POST">
+							<input type="hidden" name="_template" value="box">
+							<div class="md:flex mb-6">
+								<div class="md:w-1/3">
+									<label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="full-name">
+										Your Full Name
+									</label>
+								</div>
+								<div class="md:w-2/3">
+									<input class="form-input block w-full focus:bg-white" id="full-name" name="name" type="text" value="">
+									<p class="py-2 text-sm text-gray-600">Your full name including salutations and any other names.</p>
+								</div>
+							</div>
+
+							<div class="md:flex mb-6">
+								<div class="md:w-1/3">
+									<label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="email">
+										Your Email Address
+									</label>
+								</div>
+								<div class="md:w-2/3">
+									<input class="form-input block w-full focus:bg-white" id="email" name="email" type="email" value="">
+									<p class="py-2 text-sm text-gray-600">If you do not have an email address, please use a trusted relatives'.</p>
+								</div>
+							</div>
+
+							<div class="md:flex mb-6">
+								<div class="md:w-1/3">
+									<label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="visa">
+										Do you already have a Leosian Visa or Citizenship?
+									</label>
+								</div>
+								<div class="md:w-2/3">
+									<div class="mt-2">
+										<label class="inline-flex items-center">
+											<input type="radio" class="form-radio text-indigo-600" name="Existing Visa?" value="Yes">
+											<span class="ml-2">Yes</span>
+										</label>
+										<label class="inline-flex items-center ml-6">
+											<input type="radio" class="form-radio" name="Existing Visa?" value="No">
+											<span class="ml-2">No</span>
+										</label>
+									</div>
+									<p class="py-2 text-sm text-gray-600">This includes governmental visas.</p>
+								</div>
+							</div>
+
+							<div class="md:flex mb-6">
+								<div class="md:w-1/3">
+									<label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="dob">
+										Your Date of Birth
+									</label>
+								</div>
+								<div class="md:w-2/3">
+									<input class="form-input block w-full focus:bg-white" id="dob" name="dob" type="date" value="">
+								</div>
+							</div>
+
+							<div class="md:flex md:items-center">
+								<div class="md:w-1/3"></div>
+								<div class="md:w-2/3">
+									
+								</div>
+							</div>
+
+						</div>
+						<!--/Card-->
+
+						<!--divider-->
+						<hr class="bg-gray-300 my-12">
+
+						<!--Title-->
+						<h2 class="font-sans font-bold break-normal text-gray-700 px-2 pb-8 text-xl">Your Visa</h2>
+
+						<!--Card-->
+						<div id='section2' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+
+
+							<div class="md:flex mb-6">
+								<div class="md:w-1/3">
+									<label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="type">
+										Choose your Visa type
+									</label>
+								</div>
+								<div class="md:w-2/3">
+									<select name="" class="form-select block w-full focus:bg-white" name="type" required id="type">
+										<option value="Default">Choose a type</option>
+										<option value="Residential">Residential</option>
+										<option value="Recreational">Recreational</option>
+										<option value="Work">Work</option>
+										<option value="Govermental">Govermental</option>
+									</select>
+		
+									<p class="py-2 text-sm text-gray-600">If you are unsure, please explain in the required comments section.</p>
+								</div>
+							</div>
+
+							<div class="md:flex mb-6">
+								<div class="md:w-1/3">
+									<label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="reason">
+										Please explain your reason for selecting this Visa type.
+									</label>
+								</div>
+								<div class="md:w-2/3">
+									<textarea class="form-textarea block w-full focus:bg-white" name="reason" id="reason" value="" required rows="5"></textarea>
+									<p class="py-2 text-sm text-gray-600">Please add any comments here.</p>
+								</div>
+							</div>
+
+							<div class="md:flex md:items-center">
+								<div class="md:w-1/3"></div>
+								<div class="md:w-2/3">
+									
+								</div>
+							</div>
+
+						</div>
+						<!--/Card-->
+
+						<!--divider-->
+						<hr class="bg-gray-300 my-12">
+
+						<!--Title-->
+						<h2 class="font-sans font-bold break-normal text-gray-700 px-2 pb-8 text-xl">Agreement</h2>
+
+						<!--Card-->
+						<div id='section3' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+
+
+							<div class="md:flex mb-6">
+								<div class="md:w-1/3">
+									<label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="agreement">
+										Do you agree and accept the Terms and Conditions and Service notes of this application?
+									</label>
+								</div>
+								<div class="md:w-2/3">
+									<div class="mt-2">
+										<label class="inline-flex items-center">
+											<input type="radio" class="form-radio text-indigo-600" name="agreement" name="agreement" value="Yes">
+											<span class="ml-2">Yes</span>
+										</label>
+										<label class="inline-flex items-center ml-6">
+											<input type="radio" class="form-radio" name="agreement" name="agreement" value="No">
+											<span class="ml-2">I disagree, and void this application.</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="md:flex md:items-center">
+								<div class="md:w-1/3"></div>
+								<div class="md:w-2/3">
+									
+								</div>
+							</div>
+
+						</div>
+						<!--/Card-->
+
+						<!--divider-->
+						<hr class="bg-gray-300 my-12">
+
+						<!--Title-->
+						<h2 class="font-sans font-bold break-normal text-gray-700 px-2 pb-8 text-xl">Submission</h2>
+
+						<!--Card-->
+						<div id='section4' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+
+							<blockquote class="border-l-4 border-blue-600 italic my-4 pl-8 md:pl-12">Please ensure that every field is correct, as changes will not be accepted and your application could face a charge of up to £50 or \50 (Leosian Backslashes).</blockquote>
+
+							<div class="pt-8">
+
+								<button class="shadow bg-blue-700 hover:bg-blue-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mr-4" type="submit">
+									Submit
+								</button>
+
+								<a href="mailto:lkwilkyway@duck.com">
+									<button class="shadow bg-blue-100 hover:bg-blue-200 focus:shadow-outline focus:outline-none text-gray-700 font-bold py-2 px-4 rounded mr-4" type="button">
+										Contact Support
+									</button>
+								</a>
+
+							</div>
+
+							
+						</div>
+						<!--/Card-->
+					
+					</form>
+
+				</section>
+			
+
+			<!--Back link -->
+			<div class="w-full lg:w-4/5 lg:ml-auto text-base md:text-sm text-gray-600 px-4 py-24 mb-12">
+			<span class="text-base text-blue-600 font-bold">&lt;</span> <a href="//ddg.co" class="text-base md:text-sm text-blue-600 font-bold no-underline hover:underline">Back</a>
+			</div>
+
 		</div>
-	</section>
+		<!--/container-->
+
+	<!-- Toggle dropdown list -->
+	<script>
+	/*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+	var userMenuDiv = document.getElementById("userMenu");
+	var userMenu = document.getElementById("userButton");
+
+	var helpMenuDiv = document.getElementById("menu-content");
+	var helpMenu = document.getElementById("menu-toggle");
+
+	document.onclick = check;
+
+	function check(e){
+	var target = (e && e.target) || (event && event.srcElement);
+
+	//User Menu
+	if (!checkParent(target, userMenuDiv)) {
+		// click NOT on the menu
+		if (checkParent(target, userMenu)) {
+		// click on the link
+		if (userMenuDiv.classList.contains("invisible")) {
+			userMenuDiv.classList.remove("invisible");
+		} else {userMenuDiv.classList.add("invisible");}
+		} else {
+		// click both outside link and outside menu, hide menu
+		userMenuDiv.classList.add("invisible");
+		}
+	}
+
+	//Help Menu
+	if (!checkParent(target, helpMenuDiv)) {
+		// click NOT on the menu
+		if (checkParent(target, helpMenu)) {
+		// click on the link
+		if (helpMenuDiv.classList.contains("hidden")) {
+			helpMenuDiv.classList.remove("hidden");
+		} else {helpMenuDiv.classList.add("hidden");}
+		} else {
+		// click both outside link and outside menu, hide menu
+		helpMenuDiv.classList.add("hidden");
+		}
+	}
+
+	}
+
+	function checkParent(t, elm) {
+	while(t.parentNode) {
+		if( t == elm ) {return true;}
+		t = t.parentNode;
+	}
+	return false;
+	}
+
+	</script>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<!-- Scroll Spy -->
+	<script>
+	/* http://jsfiddle.net/LwLBx/ */
+
+	// Cache selectors
+	var lastId,
+		topMenu = $("#menu-content"),
+		topMenuHeight = topMenu.outerHeight()+175,
+		// All list items
+		menuItems = topMenu.find("a"),
+		// Anchors corresponding to menu items
+		scrollItems = menuItems.map(function(){
+		var item = $($(this).attr("href"));
+		if (item.length) { return item; }
+		});
+
+	// Bind click handler to menu items
+	// so we can get a fancy scroll animation
+	menuItems.click(function(e){
+	var href = $(this).attr("href"),
+		offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+	$('html, body').stop().animate({ 
+		scrollTop: offsetTop
+	}, 300);
+	if (!helpMenuDiv.classList.contains("hidden")) {
+			helpMenuDiv.classList.add("hidden");
+		}
+	e.preventDefault();
+	});
+
+	// Bind to scroll
+	$(window).scroll(function(){
+	// Get container scroll position
+	var fromTop = $(this).scrollTop()+topMenuHeight;
+
+	// Get id of current scroll item
+	var cur = scrollItems.map(function(){
+		if ($(this).offset().top < fromTop)
+		return this;
+	});
+	// Get the id of the current element
+	cur = cur[cur.length-1];
+	var id = cur && cur.length ? cur[0].id : "";
+
+	if (lastId !== id) {
+		lastId = id;
+		// Set/remove active class
+		menuItems
+			.parent().removeClass("font-bold border-blue-600")
+			.end().filter("[href='#"+id+"']").parent().addClass("font-bold border-blue-600");
+	}                   
+	});
+
+	</script>
+
+	</body>
 </Layout>
